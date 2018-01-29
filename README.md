@@ -1,5 +1,3 @@
-# prisma-react-native-ecommerce
+# prisma-ecommerce
 
-## The branches of this project are sorted in the order they were coded.
-
-[Click me for the YouTube playlist associated with this repo](https://www.youtube.com/playlist?list=PLN3n1USn4xlmqhVdKMurNREwtiUpq-SFy)
+[Watch the video to learn how it was made.](https://youtu.be/uyOI-hUU00A)
