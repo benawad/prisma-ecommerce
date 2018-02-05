@@ -6,7 +6,7 @@ export interface Context {
   request: any
 }
 
-export function getUserId(ctx: Context, jwtToken) {
+export function getUserId(ctx: Context, jwtToken='') {
   let token = '';
 
   if (jwtToken) {
