@@ -1,5 +1,4 @@
-# import Post from "./generated/prisma.graphql"
-# import Product from "./generated/prisma.graphql"
+# import Post, Product, ProductWhereInput, ProductOrderByInput from "./generated/prisma.graphql"
 
 scalar Upload
 
@@ -7,6 +6,15 @@ type Query {
   feed: [Post!]!
   drafts: [Post!]!
   post(id: ID!): Post!
+  products(
+    where: ProductWhereInput
+    orderBy: ProductOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [Product]!
   me: User
 }
 
