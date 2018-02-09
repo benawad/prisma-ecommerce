@@ -5,7 +5,10 @@ import { Context, createToken, getUserId } from "../../utils";
 export const auth = {
   async refreshToken(parent, args, ctx: Context, info) {
     const userId = getUserId(ctx);
-    return createToken(userId);
+    return {
+      token: createToken(userId),
+      userId,
+    }
   },
   async signup(parent, args, ctx: Context, info) {
     const password = await bcrypt.hash(args.password, 10);
