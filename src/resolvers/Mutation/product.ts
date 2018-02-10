@@ -1,5 +1,5 @@
 import { createWriteStream } from "fs";
-const shortid = require("shortid");
+import * as shortid from "shortid";
 
 import { getUserId, Context } from "../../utils";
 

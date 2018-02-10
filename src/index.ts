@@ -1,5 +1,5 @@
 import { GraphQLServer } from "graphql-yoga";
-const express = require("express");
+import * as express from "express";
 
 import { Prisma } from "./generated/prisma";
 import resolvers from "./resolvers";

@@ -2,7 +2,10 @@ import { forwardTo } from "prisma-binding";
 import { getUserId, Context } from "../utils";
 
 export const Query = {
-  products: forwardTo("db"),
+  products: (parent, args, ctx: Context, info) => {
+    getUserId(ctx);
+    return forwardTo("db")(parent, args, ctx, info);
+  },
   feed(parent, args, ctx: Context, info) {
     return ctx.db.query.posts({ where: { isPublished: true } }, info);
   },
