@@ -1,4 +1,4 @@
-# import Post, Product, ProductWhereInput, ProductOrderByInput from "./generated/prisma.graphql"
+# import Post, Product, ProductWhereInput, ProductOrderByInput, ProductWhereUniqueInput from "./generated/prisma.graphql"
 
 scalar Upload
 
@@ -28,6 +28,8 @@ type Mutation {
   signup(email: String!, password: String!, name: String!): AuthPayload!
   login(email: String!, password: String!): LoginResponse!
   createProduct(name: String!, price: Float!, picture: Upload!): Product!
+  updateProduct(id: ID!, name: String, price: Float, picture: Upload): Product
+  deleteProduct(where: ProductWhereUniqueInput!): Product
   createDraft(title: String!, text: String!): Post!
   publish(id: ID!): Post!
   deletePost(id: ID!): Post!
