@@ -30,11 +30,11 @@ export const product = {
     info
   ) {
     const userId = getUserId(ctx);
-    const product = await ctx.db.query.product({ where: { id } });
-    console.log(product);
-    if (userId !== product.seller.id) {
-      throw new Error("Not authorized");
-    }
+    // const product = await ctx.db.query.product({ where: { id } });
+    // console.log('product: ', product);
+    // if (userId !== product.seller.id) {
+    //   throw new Error("Not authorized");
+    // }
 
     let pictureUrl = null;
     if (picture) {
