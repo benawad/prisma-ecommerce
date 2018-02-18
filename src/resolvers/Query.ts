@@ -6,6 +6,10 @@ export const Query = {
     getUserId(ctx);
     return forwardTo("db")(parent, args, ctx, info);
   },
+  productsConnection: (parent, args, ctx: Context, info) => {
+    getUserId(ctx);
+    return forwardTo("db")(parent, args, ctx, info);
+  },
   feed(parent, args, ctx: Context, info) {
     return ctx.db.query.posts({ where: { isPublished: true } }, info);
   },

@@ -1,4 +1,4 @@
-# import Post, Product, ProductWhereInput, ProductOrderByInput, ProductWhereUniqueInput from "./generated/prisma.graphql"
+# import Query.productsConnection, Post, Product, ProductWhereInput, ProductOrderByInput, ProductWhereUniqueInput from "./generated/prisma.graphql"
 
 scalar Upload
 
